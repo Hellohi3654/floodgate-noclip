@@ -21,8 +21,9 @@ public class Listener implements org.bukkit.event.Listener {
         Player player = event.getPlayer();
         // System.out.println(player.getUniqueId());
         // System.out.println(FloodgateAPI.isBedrockPlayer(player.getUniqueId()));
+       public void setNoClip(Player player, boolean noclip) {
         if (FloodgateAPI.isBedrockPlayer(player.getUniqueId())) {
-            ((CraftPlayer) player).getHandle().noclip = true;
+           ((CraftPlayer) player).getHandle().noclip = noclip;
             logger.info("floodgate-noclip: disabled collision for player " + player.getName());
         }
     }
