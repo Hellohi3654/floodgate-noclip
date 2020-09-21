@@ -9,6 +9,13 @@ import java.lang.reflect.Field;
 import java.util.logging.Logger;
 
 public class FloodgateNoclip extends JavaPlugin {
+    
+    @Override
+    public void onLoad() {
+        SpigotConfig.movedTooQuicklyMultiplier = 50;
+        SpigotConfig.movedWronglyThreshold = 25;
+        getLogger().info("Set config options for floodgate-noclip!");
+    }
 
     @Override
     public void onEnable() {
